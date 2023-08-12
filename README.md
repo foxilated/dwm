@@ -1,4 +1,4 @@
-My personal [dwm](https://dwm.suckless.org/) setup with [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch/tree/master)
+My personal [dwm](https://dwm.suckless.org/) setup with [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch)
 <br>
 
 
