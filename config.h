@@ -134,8 +134,8 @@ static const unsigned int tabmodkey        = 0x40; /* (Alt) when this key is hel
 static const unsigned int tabcyclekey      = 0x17; /* (Tab) when this key is hit the menu moves one position forward in client stack. Must be the same key as used to run alttabstart */
 static const unsigned int tabposy          = 1;    /* tab position on Y axis, 0 = top, 1 = center, 2 = bottom */
 static const unsigned int tabposx          = 1;    /* tab position on X axis, 0 = left, 1 = center, 2 = right */
-static const unsigned int maxwtab          = 600;  /* tab menu width */
-static const unsigned int maxhtab          = 200;  /* tab menu height */
+static const unsigned int maxwtab          = 10;  /* tab menu width */
+static const unsigned int maxhtab          = 10;  /* tab menu height */
 #endif // ALT_TAB_PATCH
 
 /* Indicators: see patch/bar_indicators.h for options */
@@ -1293,6 +1293,9 @@ static const Key keys[] = {
 
 	// input language changing
 	{ MODKEY, 	       	        XK_space,                            spawn,                                             SHCMD("setxkbmap -layout us,ara -option grp:alt_shift_toggle") },
+	// backlight changing
+	{ MODKEY, 			XK_F6,         spawn, SHCMD("light -U 10") },
+	{ MODKEY,      			XK_F5, 	       spawn, SHCMD("light -A 10") }, 
 
 	TAGKEYS(                        XK_1,                                  0)
 	TAGKEYS(                        XK_2,                                  1)
