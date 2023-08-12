@@ -1294,8 +1294,8 @@ static const Key keys[] = {
 	// input language changing
 	{ MODKEY, 	       	        XK_space,                            spawn,                                             SHCMD("setxkbmap -layout us,ara -option grp:alt_shift_toggle") },
 	// backlight changing
-	{ MODKEY, 			XK_F6,         spawn, SHCMD("light -U 10") },
-	{ MODKEY,      			XK_F5, 	       spawn, SHCMD("light -A 10") }, 
+	{ MODKEY, 			XK_F6,         spawn, SHCMD("light -A 10") },
+	{ MODKEY,      			XK_F5, 	       spawn, SHCMD("light -U 10") }, 
 
 	TAGKEYS(                        XK_1,                                  0)
 	TAGKEYS(                        XK_2,                                  1)
