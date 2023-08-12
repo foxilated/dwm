@@ -162,9 +162,9 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=12", "Cairo:size=12" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=16", "Cairo:size=16" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=12";
+static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=16";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -194,9 +194,9 @@ static char tagsnormbordercolor[]        = "#22212C";
 static char tagsnormfloatcolor[]         = "#FF80BF";
 
 static char tagsselfgcolor[]             = "#22212C";
-static char tagsselbgcolor[]             = "#EDED7A";
-static char tagsselbordercolor[]         = "#EDED7A";
-static char tagsselfloatcolor[]          = "#EDED7A";
+static char tagsselbgcolor[]             = "#8AFF80";
+static char tagsselbordercolor[]         = "#8AFF80";
+static char tagsselfloatcolor[]          = "#8AFF80";
 
 static char hidnormfgcolor[]             = "#005577";
 static char hidselfgcolor[]              = "#227799";
