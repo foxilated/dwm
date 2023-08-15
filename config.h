@@ -1290,7 +1290,7 @@ static const Key keys[] = {
 
 	// flameshot
 	{ MODKEY, 			XK_F12,	       spawn,                  SHCMD("flameshot gui") },
-
+	{ MODKEY, 			XK_F11,        spawn,	               SHCMD("xcolor")},
 	// input language changing
 	{ MODKEY, 	       	        XK_space,                            spawn,                                             SHCMD("setxkbmap -layout us,ara -option grp:alt_shift_toggle") },
 	// backlight changing
