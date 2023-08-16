@@ -97,7 +97,7 @@ static const int vertpadbar              = 0;   /* vertical padding for statusba
 static const char buttonbar[]            = "<O>";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
-static const unsigned int systrayspacing = 4;   /* systray spacing */
+static const unsigned int systrayspacing = 8;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 #endif // BAR_SYSTRAY_PATCH
 #if BAR_TAGLABELS_PATCH
@@ -901,7 +901,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
 	{ ControlMask|ShiftMask,        XK_space,      spawn,                  {.v = dmenucmd } },
-	{ ControlMask|ShiftMask,        XK_Return,     spawn,                  {.v = termcmd } },
+	{ ControlMask|ShiftMask,        XK_Return,     spawn,                  SHCMD("SHELL=/bin/fish st") },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -1291,6 +1291,8 @@ static const Key keys[] = {
 	// flameshot
 	{ MODKEY, 			XK_F12,	       spawn,                  SHCMD("flameshot gui") },
 	{ MODKEY, 			XK_F11,        spawn,	               SHCMD("xcolor")},
+
+	{ MODKEY|ControlMask,		XK_q,          spawn,  		       SHCMD("find-cursor -cf -s 200")},
 	// input language changing
 	{ MODKEY, 	       	        XK_space,                            spawn,                                             SHCMD("setxkbmap -layout us,ara -option grp:alt_shift_toggle") },
 	// backlight changing
