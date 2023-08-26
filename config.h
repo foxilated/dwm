@@ -169,12 +169,12 @@ static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=16";
 static char c000000[]                    = "#000000"; // placeholder value
 
 static char normfgcolor[]                = "#F8F8F2";
-static char normbgcolor[]                = "#22212C";
+static char normbgcolor[]                = "#000000";
 static char normbordercolor[]            = "#454158";
 static char normfloatcolor[]             = "#FF80BF";
 
 static char selfgcolor[]                 = "#F8F8F2";
-static char selbgcolor[]                 = "#22212C";
+static char selbgcolor[]                 = "#000000";
 static char selbordercolor[]             = "#8AFF80";
 static char selfloatcolor[]              = "#8AFF80";
 
@@ -189,12 +189,12 @@ static char titleselbordercolor[]        = "#22212C";
 static char titleselfloatcolor[]         = "#22212C";
 
 static char tagsnormfgcolor[]            = "#F8F8F2";
-static char tagsnormbgcolor[]            = "#22212C";
+static char tagsnormbgcolor[]            = "#000000";
 static char tagsnormbordercolor[]        = "#22212C";
 static char tagsnormfloatcolor[]         = "#FF80BF";
 
 static char tagsselfgcolor[]             = "#22212C";
-static char tagsselbgcolor[]             = "#8AFF80";
+static char tagsselbgcolor[]             = "#84FFF3";
 static char tagsselbordercolor[]         = "#8AFF80";
 static char tagsselfloatcolor[]          = "#8AFF80";
 
@@ -257,8 +257,8 @@ static char selfloatbgcolor[]            = "#117799";
 #endif // BAR_FLEXWINTITLE_PATCH
 
 #if BAR_ALPHA_PATCH
-static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
+static const unsigned int baralpha = 0.0;
+static const unsigned int borderalpha = 0.0;
 static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
 	[SchemeNorm]         = { OPAQUE, baralpha, borderalpha },
@@ -900,8 +900,6 @@ static const Key keys[] = {
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
-	{ ControlMask|ShiftMask,        XK_space,      spawn,                  {.v = dmenucmd } },
-	{ ControlMask|ShiftMask,        XK_Return,     spawn,                  SHCMD("SHELL=/bin/fish st") },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -990,6 +988,7 @@ static const Key keys[] = {
 	#if REORGANIZETAGS_PATCH
 	{ MODKEY|ControlMask,           XK_r,          reorganizetags,         {0} },
 	#endif // REORGANIZETAGS_PATCH
+	// backlight changing
 	#if DISTRIBUTETAGS_PATCH
 	{ MODKEY|ControlMask,           XK_d,          distributetags,         {0} },
 	#endif // DISTRIBUTETAGS_PATCH
@@ -1288,14 +1287,6 @@ static const Key keys[] = {
 	#endif // MPDCONTROL_PATCH
 	/* --- ADDITIONAL SOFTWARE --- */
 
-	// flameshot
-	{ MODKEY, 			XK_F12,	       spawn,                  SHCMD("flameshot gui") },
-	{ MODKEY, 			XK_F11,        spawn,	               SHCMD("xcolor")},
-
-	{ MODKEY|ControlMask,		XK_q,          spawn,  		       SHCMD("find-cursor -cf -s 200")},
-	// input language changing
-	{ MODKEY, 	       	        XK_space,                            spawn,                                             SHCMD("setxkbmap -layout us,ara -option grp:alt_shift_toggle") },
-	// backlight changing
 	{ MODKEY, 			XK_F6,         spawn, SHCMD("light -A 10") },
 	{ MODKEY,      			XK_F5, 	       spawn, SHCMD("light -U 10") }, 
 
