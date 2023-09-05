@@ -612,7 +612,7 @@
  * This patch takes precedence over the fakefullscreen client patch below.
  * https://dwm.suckless.org/patches/fakefullscreen/
  */
-#define FAKEFULLSCREEN_PATCH 0
+#define FAKEFULLSCREEN_PATCH 1
 
 /* Similarly to the fakefullscreen patch this patch only allows clients to "fullscreen" into
  * the space currently given to them.
@@ -1020,7 +1020,7 @@
 /* Allows restarting dwm without the dependency of an external script.
  * https://dwm.suckless.org/patches/selfrestart/
  */
-#define SELFRESTART_PATCH 0
+#define SELFRESTART_PATCH 1
 
 /* This patch allow clients to keep focus when being sent to another monitor.
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-sendmon_keepfocus-6.2.diff
