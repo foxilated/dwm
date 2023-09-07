@@ -24,8 +24,8 @@ static const int scalepreview            = 4;        /* Tag preview scaling */
 static int nomodbuttons                  = 1;   /* allow client mouse button bindings that have no modifier */
 #endif // NO_MOD_BUTTONS_PATCH
 #if VANITYGAPS_PATCH
-static const unsigned int gappih         = 16;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 16;  /* vert inner gap between windows */
+static const unsigned int gappih         = 24;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 24;  /* vert inner gap between windows */
 static const unsigned int gappoh         = 16;  /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov         = 16;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
@@ -906,6 +906,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_s,          rioresize,              {0} },
 	#endif // RIODRAW_PATCH
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
+	
 	#if TOGGLETOPBAR_PATCH
 	{ MODKEY|ShiftMask,             XK_b,          toggletopbar,           {0} },
 	#endif // TOGGLETOPBAR_PATCH
