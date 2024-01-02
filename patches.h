@@ -342,7 +342,7 @@
  * and the bar will now overlay the display.
  * http://dwm.suckless.org/patches/holdbar/
  */
-#define BAR_HOLDBAR_PATCH 1
+#define BAR_HOLDBAR_PATCH 0
 
 /* Sometimes dwm crashes when it cannot render some glyphs in window titles (usually emoji).
  * This patch is essentially a hack to ignore any errors when drawing text on the status bar.
@@ -1321,7 +1321,7 @@
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-vanitygaps-6.2.diff
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-cfacts-vanitygaps-6.2.diff
  */
-#define VANITYGAPS_PATCH 1
+#define VANITYGAPS_PATCH 0
 
 /* This patch adds outer gaps for the monocle layout.
  * Most gaps patches tries to avoid gaps on the monocle layout, as it is often used as a

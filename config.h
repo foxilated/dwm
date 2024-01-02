@@ -13,7 +13,7 @@ static const unsigned int borderpx       = 2;   /* border pixel of windows */
  * automatically update with setborderpx. */
 static const unsigned int barborderpx    = 0;  /* border pixel of bar */
 #endif // BAR_BORDER_PATCH
-static const unsigned int snap           = 32;  /* snap pixel */
+static const unsigned int snap           = 4;  /* snap pixel */
 #if SWALLOW_PATCH
 static const int swallowfloating         = 0;   /* 1 means swallow floating windows by default */
 #endif // SWALLOW_PATCH
@@ -42,9 +42,9 @@ static const char *altbarclass           = "Polybar"; /* Alternate bar class nam
 static const char *altbarcmd             = "$HOME/.config/polybar/launch.sh --material"; /* Alternate bar launch command */
 #endif // BAR_ANYBAR_PATCH
 #if BAR_HOLDBAR_PATCH
-static const int showbar                 = 1;   /* 0 means no bar */
+static const int showbar                 = 0;   /* 0 means no bar */
 #else
-static const int showbar                 = 1;   /* 0 means no bar */
+static const int showbar                 = 0;   /* 0 means no bar */
 #endif // BAR_HOLDBAR_PATCH
 static const int topbar                  = 1;   /* 0 means bottom bar */
 #if TAB_PATCH
@@ -166,35 +166,35 @@ static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=14", 
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=16";
 
-static char c000000[]                    = "#000000"; // placeholder value
+static char c000000[]                    = "#111115"; // placeholder value
 
-static char normfgcolor[]                = "#F8F8F2";
-static char normbgcolor[]                = "#000000";
+static char normfgcolor[]                = "#FFFFFF";
+static char normbgcolor[]                = "#111115";
 static char normbordercolor[]            = "#404040";
 static char normfloatcolor[]             = "#FF80BF";
 
-static char selfgcolor[]                 = "#F8F8F2";
+static char selfgcolor[]                 = "#FFFFFF";
 static char selbgcolor[]                 = "#000000";
-static char selbordercolor[]             = "#F8F8F2";
-static char selfloatcolor[]              = "#F8F8F2";
+static char selbordercolor[]             = "#FFFFFF";
+static char selfloatcolor[]              = "#FFFFFF";
 
-static char titlenormfgcolor[]           = "#F8F8F2";
-static char titlenormbgcolor[]           = "#161616";
-static char titlenormbordercolor[]       = "#161616";
-static char titlenormfloatcolor[]        = "#161616";
+static char titlenormfgcolor[]           = "#FFFFFF";
+static char titlenormbgcolor[]           = "#111115";
+static char titlenormbordercolor[]       = "#111115";
+static char titlenormfloatcolor[]        = "#111115";
 
-static char titleselfgcolor[]            = "#F8F8F2";
-static char titleselbgcolor[]            = "#161616";
-static char titleselbordercolor[]        = "#161616";
-static char titleselfloatcolor[]         = "#161616";
+static char titleselfgcolor[]            = "#FFFFFF";
+static char titleselbgcolor[]            = "#111115";
+static char titleselbordercolor[]        = "#111115";
+static char titleselfloatcolor[]         = "#111115";
 
-static char tagsnormfgcolor[]            = "#F8F8F2";
-static char tagsnormbgcolor[]            = "#000000";
-static char tagsnormbordercolor[]        = "#161616";
+static char tagsnormfgcolor[]            = "#FFFFFF";
+static char tagsnormbgcolor[]            = "#111115";
+static char tagsnormbordercolor[]        = "#111115";
 static char tagsnormfloatcolor[]         = "#FF80BF";
 
-static char tagsselfgcolor[]             = "#161616";
-static char tagsselbgcolor[]             = "#84FFF3";
+static char tagsselfgcolor[]             = "#111115";
+static char tagsselbgcolor[]             = "#FFFFFF";
 static char tagsselbordercolor[]         = "#8AFF80";
 static char tagsselfloatcolor[]          = "#8AFF80";
 
@@ -532,7 +532,7 @@ static const Inset default_inset = {
 #endif // INSETS_PATCH
 
 /* Bar rules allow you to configure what is shown where on the bar, as well as
- * introducing your own bar modules.
+ * introducing your own bar modules.b
  *
  *    monitor:
  *      -1  show on all monitors
@@ -1062,7 +1062,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_u,          focusurgent,            {0} },
 	#endif // FOCUSURGENT_PATCH
 	#if BAR_HOLDBAR_PATCH
-	{ 0,                            HOLDKEY,       holdbar,                {0} },
+	{ 0,                            XK_b,       holdbar,                {0} },
 	#endif // BAR_HOLDBAR_PATCH
 	#if WINVIEW_PATCH
 	{ MODKEY,                       XK_o,          winview,                {0} },
